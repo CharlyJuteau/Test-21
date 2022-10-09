@@ -1,0 +1,759 @@
+:root {
+    --primaryColor: #FDBE00;
+    --secondaryColor: #DFE0DF;
+    --textFontSize: 1rem;
+    --titleFontSize: 2.2rem;
+    --colorFont: #303030;
+    --textFont: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    color: #303030;
+    background: black;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: var(--titleFontSize);
+}
+
+@font-face {
+    font-family: 'beePolice';
+    src: url('./assets/DK Abeille.otf');
+}
+
+/* CSS menu navigation et presentation */
+
+.hidden {
+    display: none;
+  }
+  
+  button {
+    width: 3rem;
+    aspect-ratio: 1;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+.desktop {
+    display: block;
+    padding-bottom: 3%;
+    background-image: url("./assets/backgroundHeader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.desktop ul {
+    text-align: center;
+    list-style-type: none;
+    color: var(--colorFont);
+    padding: 1em;
+}
+
+.desktop ul li {
+    display: inline;
+    margin: 2em;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.desktop ul a {
+    color: var(--colorFont);
+    border-radius: 5px;
+    padding: 0.2em;
+    text-decoration: none;
+}
+
+.desktop ul a:hover {
+    background-color: #DFE0DF;
+}
+
+.banner {
+    width: auto;
+    background-color: var(--secondaryColor);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    padding: 1em;
+}
+
+.bannerLi1 {
+    display: block;
+    float: left;
+    padding: 4%;
+    margin-left: 3%;
+    padding-bottom: 0;
+}
+
+.bannerLi2 {
+    display: block;
+    float: right;
+    padding: 4%;
+    padding-bottom: 0;
+    /* margin-right: 10%; */
+}
+
+img#logosite {
+    width: 13%;
+    /* margin: 4%; */
+}
+
+.bannerPresentation {
+    text-align: center;
+    width: clamp(50%, 33%, 50%);
+    color: var(--colorFont);
+    /* max-width: 50vh; */
+    margin: auto;
+    /* height: 5em; */
+    padding: 1em;
+}
+
+div.banner h1 {
+    color: var(--colorFont);
+    text-align: center;
+    font-size: var(--titleFontSize);
+    /* border: 1px solid black;
+    width: auto; */
+}
+
+/* CSS presentation école et formulaire */
+
+.Presentation h2 {
+    margin-bottom: 6%;
+}
+
+.schoolPresentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.Presentation {
+    max-width: 50%;
+    margin-right: 5%;
+    background: var(--secondaryColor);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.logo {
+    margin: auto;
+    transform: scale(2);
+}
+
+.formPart {
+    color: var(--secondaryColor);
+}
+
+.contactPresentation {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.line {
+    margin: 6rem;
+    height: 1px;
+    background: var(--secondaryColor);
+}
+
+input,
+textarea {
+    display: block;
+    height: 1.5rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: #DFE0DF;
+    background-color: var(--secondaryColor);
+}
+
+input:hover {
+    background-color:var(--primaryColor);
+    color: var(--colorFont);
+}
+
+textarea {
+    height: 5rem;
+}
+
+textarea:hover {
+    background-color:var(--primaryColor);
+    color: var(--colorFont);
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 25%;
+    height: 2rem;
+}
+
+button:hover {
+    background-color:var(--primaryColor);
+    color: var(--colorFont);
+}
+.formPart {
+    margin-bottom: 2%;
+}
+
+/* CSS footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    background-color: var(--primaryColor);
+    margin-bottom: -2rem;
+    padding: 2%;
+    background-image: url("./assets/backgroundHeader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bee {
+    opacity: 90%;
+    width: 300px;
+    transform: rotate(15deg);
+}
+
+.adress {
+    text-align: end;
+    font-family: var(--textFont);
+}
+
+em {
+    font-style: italic;
+}
+
+
+
+/* CSS ruche  */
+.hiveSection {
+    margin-bottom: 15%;
+}
+
+.hiveSection h2 {
+    font-family: "beePolice";
+    font-size: 4rem;
+    margin: 5% auto 5%;
+    color: var(--primaryColor);
+}
+
+#grid {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 7%;
+    padding: 0;
+    --reducing: calc(3/var(--numberofsquare));
+    --stagger-delay: 100ms;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#grid li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: calc(27.85714285714286%*var(--reducing));
+    padding: 0 0 calc(32.16760145166612%*var(--reducing)) 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
+    animation: cardEntrance 1300ms ease-out;
+    animation-fill-mode: backwards;
+}
+
+#grid li .hexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fdbf00;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+}
+
+#grid li * {
+    visibility: visible;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#grid li .hexagon:nth-child(1) {
+    animation-delay: calc(1* var(--stagger-delay));
+}
+
+#grid li:nth-child(2) {
+    animation-delay: calc(2* var(--stagger-delay));
+}
+
+#grid li:nth-child(3) {
+    animation-delay: calc(3* var(--stagger-delay));
+}
+
+#grid li:nth-child(4) {
+    animation-delay: calc(4* var(--stagger-delay));
+}
+
+#grid li:nth-child(5) {
+    animation-delay: calc(5* var(--stagger-delay));
+}
+
+#grid li:nth-child(6) {
+    animation-delay: calc(6* var(--stagger-delay));
+}
+
+#grid li:nth-child(7) {
+    animation-delay: calc(7* var(--stagger-delay));
+}
+
+#grid li:nth-child(8) {
+    animation-delay: calc(8* var(--stagger-delay));
+}
+
+#grid li:nth-child(9) {
+    animation-delay: calc(9* var(--stagger-delay));
+}
+
+#grid li:nth-child(10) {
+    animation-delay: calc(10* var(--stagger-delay));
+}
+
+#grid li:nth-child(11) {
+    animation-delay: calc(11* var(--stagger-delay));
+}
+
+#grid li:nth-child(12) {
+    animation-delay: calc(12* var(--stagger-delay));
+}
+
+#grid li:nth-child(13) {
+    animation-delay: calc(13* var(--stagger-delay));
+}
+
+#grid li:nth-child(14) {
+    animation-delay: calc(14* var(--stagger-delay));
+}
+
+#grid li:nth-child(15) {
+    animation-delay: calc(15* var(--stagger-delay));
+}
+
+#grid li:nth-child(16) {
+    animation-delay: calc(16* var(--stagger-delay));
+}
+
+/* CSS alveole */
+p.mail {
+    text-align: center;
+    margin: 0;
+    padding: 0%;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    opacity: 1;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.gmailLogo {
+    width: 20%;
+    }
+    
+p.name {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p.linkedin {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.linkedinLogo {
+    width: 50%;
+    }
+
+p.cv {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.cvLogo {
+    width: 100%;
+    }
+
+p.github {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.gitHubLogo {
+    width: 140%;
+    }
+
+img.imagehexa {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaLoic {
+    width: 115%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaNedim {
+    width: 110%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaFlorian {
+    width: 115%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaHerve {
+    width: 115%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaAsma {
+    width: 115%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaPerrine {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+}
+
+img.imagehexaAlexisF {
+    width: 192%;
+    position: absolute;
+    margin: 0;
+    left: -45%;
+}
+
+.hexagon:hover img.imagehexaAlexisF {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaPerrine {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaAsma {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaFlorian {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaLoic {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaNedim {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexaHerve {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.hexagon:hover img.imagehexa {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.box {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hexagon:hover .box {
+    opacity: 1;
+    transition-delay: 0.3s;
+    pointer-events: auto;
+}
+
+
+/* version desktop */
+@media screen and (min-width:1200px) {
+    nav ul li {
+        font-size: 1.5rem;
+    }
+
+    #grid {
+        --numberofsquare: 4;
+    }
+
+    #grid li:nth-child(4n+2),
+    #grid li:nth-child(4n+3),
+    #grid li:nth-child(4n+4) {
+        margin: 0 0 0 1%;
+    }
+
+    #grid li:nth-child(8n+5),
+    #grid li:nth-child(8n+6),
+    #grid li:nth-child(8n+7),
+    #grid li:nth-child(8n+8) {
+        margin-top: calc(-6.9285714285%*var(--reducing));
+        margin-bottom: calc(-6.9285714285%*var(--reducing));
+        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+
+    #grid li:nth-child(8n+5) {
+        margin-left: 0.5%;
+    }
+}
+
+/* version tablette */
+@media screen and (max-width:1200px) and (min-width:768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    #grid {
+        --numberofsquare: 3;
+    }
+
+    #grid li:nth-child(3n+2) {
+        margin: 0 1%;
+    }
+
+    #grid li:nth-child(6n+4),
+    #grid li:nth-child(6n+5),
+    #grid li:nth-child(6n+6) {
+        margin-top: calc(-6.9285714285%*var(--reducing));
+        margin-bottom: calc(-6.9285714285%*var(--reducing));
+        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+
+    #grid li:nth-child(6n+4) {
+        margin-left: 0.5%;
+    }
+}
+
+/* version mobile */
+@media screen and (max-width:768px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    #grid {
+        --numberofsquare: 1.5;
+        margin: 0 auto;
+    }
+
+    #grid li:nth-child(2n) {
+        margin-top: calc(-6.9285714285%*var(--reducing));
+        margin-bottom: calc(-6.9285714285%*var(--reducing));
+        -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+
+    #grid li:nth-child(2n) {
+        margin-left: 0.5%;
+    }
+
+    nav ul li {
+        display: block;
+        flex-direction: column;
+
+    }
+
+    .bannerLi1 {
+        display: block;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        margin-right: 0.5%;
+        line-height: 0.5%;
+        /* border: 1px solid black; */
+    }
+
+
+    .bannerLi2 {
+        display: block;
+        position: absolute;
+        right: 0;
+        padding: 0rem;
+        margin-right: 0.5%;
+        margin-top: 5rem;
+        line-height: 0.5%;
+        /* border: 1px solid black; */
+
+    }
+
+    .bannerLi1 li,
+    .bannerLi2 li {
+        margin-bottom: 7%;
+    }
+
+    nav {
+        background-color: var(--primaryColor);
+        display: block;
+        padding-bottom: 45%;
+        margin-bottom: 3em;
+
+    }
+
+
+      .desktop {
+        display: none;
+      }
+
+    .banner {
+        width: auto;
+        background-color: var(--secondaryColor);
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+        padding: 1em;
+        font-size: 0.8em;
+    }
+
+    img#logosite {
+        width: 50%;
+        margin: 0;
+        display: block;
+        float: left;
+
+    }
+
+    .bannerPresentation {
+        width: auto;
+    }
+
+    .schoolPresentation {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .logo {
+        transform: scale(1);
+        margin-top: 0%;
+    }
+
+    .Presentation {
+        margin-top: 10%;
+        max-width: 80%;
+    }
+
+    .Presentation h2 {
+        display: none;
+    }
+
+    .line {
+        margin: 2rem;
+    }
+
+    .contactPresentation {
+        margin: 10% 10% 10% 10%;
+    }
+
+    .bee {
+        display: none;
+    }
+
+    .adress {
+        text-align: center;
+        margin: 5%;
+    }
+
+    .formPart {
+        margin-bottom: 10%;
+    }
+}
